@@ -11,16 +11,20 @@ a {
   color: currentColor;
 }
 
-/* Utils */
+p {
+  line-height: 30px;
+}
 
+/* Utils */
 .container {
-  width: 80%;
+  width: 90%;
 }
 
 .button {
   background-color: white;
   border-radius: 30px;
   padding: 8px 10px;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
 
 /* Header */
@@ -51,25 +55,45 @@ a {
   gap: 15px;
   width: 90%;
 }
-
+/* recipe */
 .recipe {
   background-color: white;
   margin: 0 auto;
   display: flex;
   flex-direction: column;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
 
 .recipe-list {
   padding: 40px;
-}
-.recipe-list p {
-  line-height: 30px;
 }
 
 .button-list {
   display: flex;
   justify-content: space-between;
   margin: 20px auto;
+}
+
+/* presentation */
+.presentation {
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+}
+
+.presentation hr {
+  border-color: orange;
+  width: 10%;
+}
+
+.presentation .image-container {
+  width: 60%;
+  margin: 10px auto;
+  align-self: center;
+}
+
+.presentation p b {
+  font-size: 1.1rem;
 }
 
 /* SPAM */
