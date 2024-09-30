@@ -14,6 +14,8 @@ a {
 /* Utils */
 .container {
   width: 90%;
+  margin: 20px auto;
+  max-width: 1100px;
 }
 
 .button {
@@ -26,15 +28,20 @@ a {
 .d-block {
   display: none;
 }
+.d-inline {
+  display: none;
+}
+.d-inline-block {
+  display: none;
+}
 
 /* Header */
 .header-section {
   display: flex;
-  padding: 20px 0;
+  padding: 20px 10px;
 }
-.header-section p {
+.header-section h2 {
   color: orange;
-  margin: 20px auto;
   font-family: "Nerko One", cursive;
   font-weight: bolder;
   font-size: 3rem;
@@ -48,7 +55,6 @@ a {
 }
 
 .body-title {
-  margin: 10px auto;
   display: flex;
   flex-direction: column;
   gap: 7px;
@@ -63,7 +69,8 @@ a {
 }
 
 .banner {
-  margin: 10px 5%;
+  margin: 0 auto;
+  width: 100%;
 }
 
 /* recipe */
@@ -75,29 +82,29 @@ a {
   box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
 
-.recipe h1 {
-  margin: 20px 40px 0;
+.recipe h2 {
+  margin: 20px 40px;
 }
 
 .recipe-list {
-  padding: 20px 40px;
+  margin: 0 40px 20px;
 }
 
 .recipe-list p {
   line-height: 30px;
+  margin-right: 30px;
 }
 
 .button-list {
   display: flex;
   justify-content: space-between;
-  margin: 20px auto;
 }
 
 /* presentation */
 .presentation {
-  margin: 20px auto;
   display: flex;
   flex-direction: column;
+  gap: 10px;
 }
 
 .presentation hr {
@@ -108,8 +115,12 @@ a {
 .presentation .image-container {
   display: block;
   width: 60%;
-  margin: 10px auto;
   align-self: center;
+}
+
+.presentation h2 {
+  font-size: 2em;
+  font-weight: 500;
 }
 
 .presentation p {
@@ -128,7 +139,12 @@ a {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 7px;
+  gap: 10px;
+}
+.info {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
 }
 
 .link-list {
@@ -156,22 +172,68 @@ a {
 
 /* Media */
 @media screen and (min-width: 768px) {
-  .header-section p {
-    margin: 20px;
-    font-size: 3.5rem;
-  }
   .body-section {
     padding: 50px 0;
+  }
+  .body-title h1 {
+    font-size: 2.2rem;
   }
   .recipe-list {
     display: flex;
     flex-wrap: wrap;
-    gap: 0px 75px;
+  }
+  .recipe h1 {
+    margin-top: 40px;
+  }
+  .d-inline {
+    display: inline;
+  }
+  .d-inline-block {
+    display: inline-block;
   }
   .d-block {
-    display: inline;
+    display: block;
   }
   .presentation .image-container {
     display: inline;
+  }
+  .button-list .button {
+    width: 20%;
+    margin: 0 20px;
+    text-align: center;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .body-title h1 {
+    font-size: 2.6rem;
+  }
+  .recipe {
+    flex-direction: row;
+  }
+  .recipe-list {
+    display: block;
+  }
+
+  .recipe-list p {
+    margin: 0;
+  }
+
+  .recipe .image-container {
+    width: 70%;
+  }
+  .footer-section {
+    flex-direction: row;
+    justify-content: space-between;
+    font-size: 0.9rem;
+  }
+  .info {
+    text-align: left;
+    padding: 10px;
+  }
+  .link-list {
+    padding: 10px;
+    width: 50%;
+    justify-content: flex-end;
   }
 }
