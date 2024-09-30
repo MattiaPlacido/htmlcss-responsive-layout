@@ -11,10 +11,6 @@ a {
   color: currentColor;
 }
 
-p {
-  line-height: 30px;
-}
-
 /* Utils */
 .container {
   width: 90%;
@@ -27,6 +23,10 @@ p {
   box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
 
+.d-block {
+  display: none;
+}
+
 /* Header */
 .header-section {
   display: flex;
@@ -35,8 +35,7 @@ p {
 .header-section p {
   color: orange;
   margin: 20px auto;
-  justify-content: center;
-  font-family: "Comic Sans MS", "Comic Sans", cursive;
+  font-family: "Nerko One", cursive;
   font-weight: bolder;
   font-size: 3rem;
   text-shadow: 3px 2px 3px rgb(0 0 0 / 20%);
@@ -53,7 +52,6 @@ p {
   display: flex;
   flex-direction: column;
   gap: 7px;
-  width: 90%;
 }
 .body-title p {
   opacity: 0.4;
@@ -62,6 +60,10 @@ p {
 .body-title h1 {
   font-size: 1.9rem;
   color: #69578f;
+}
+
+.banner {
+  margin: 10px 5%;
 }
 
 /* recipe */
@@ -73,8 +75,16 @@ p {
   box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
 
+.recipe h1 {
+  margin: 20px 40px 0;
+}
+
 .recipe-list {
-  padding: 40px;
+  padding: 20px 40px;
+}
+
+.recipe-list p {
+  line-height: 30px;
 }
 
 .button-list {
@@ -96,9 +106,14 @@ p {
 }
 
 .presentation .image-container {
+  display: block;
   width: 60%;
   margin: 10px auto;
   align-self: center;
+}
+
+.presentation p {
+  line-height: 30px;
 }
 
 .presentation p b {
@@ -119,7 +134,7 @@ p {
 .link-list {
   display: flex;
   gap: 20px;
-  width: 60%;
+  width: 70%;
   flex-wrap: wrap;
   justify-content: center;
 }
@@ -137,4 +152,26 @@ p {
 }
 .pink {
   color: palevioletred;
+}
+
+/* Media */
+@media screen and (min-width: 768px) {
+  .header-section p {
+    margin: 20px;
+    font-size: 3.5rem;
+  }
+  .body-section {
+    padding: 50px 0;
+  }
+  .recipe-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0px 75px;
+  }
+  .d-block {
+    display: inline;
+  }
+  .presentation .image-container {
+    display: inline;
+  }
 }
